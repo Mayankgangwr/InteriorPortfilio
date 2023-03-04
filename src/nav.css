@@ -1,0 +1,20 @@
+.d-mobile {
+  display: none !important;
+}
+.d-desktop {
+  display: block !important;
+}
+.m-pading {
+}
+@media screen and (max-width: 1000px) {
+  .d-mobile {
+    display: block !important;
+  }
+  .d-desktop {
+    display: none !important;
+  }
+  .m-pading {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

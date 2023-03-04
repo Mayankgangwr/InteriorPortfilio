@@ -1,10 +1,17 @@
-import "./styles.css";
-
-export default function App() {
+import React from "react";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import Home from "./home";
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editinsee some magic happen!</h2>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Nav />}>
+            <Route index element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
+export default App;
