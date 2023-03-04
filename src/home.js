@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import axios from "axios";
 import "./style.css";
 import Nav from "./nav";
+import Footer from "./footer";
 import { Outlet, Link } from "react-router-dom";
 
 const settings = {
@@ -148,7 +149,7 @@ const Home = () => {
         </h2>
         <div className="row p-0">
           {service.length > 0 &&
-            service.map((el) => (
+            service.slice(0, 4).map((el) => (
               <div
                 key={el.id}
                 className="section-col col-lg-2 col-md-3 col-sm-4 col-6 p-1"
@@ -171,7 +172,40 @@ const Home = () => {
               </div>
             ))}
         </div>
+        <h2 className="text-center my-3 logo">
+          <b className="section-title px-3">Products</b>
+        </h2>
+        <div className="row p-0">
+          {service.length > 0 &&
+            service
+              .sort((a, b) => b.id - a.id)
+              .map((el) => (
+                <div
+                  key={el.id}
+                  className="section-col col-lg-2 col-md-3 col-sm-4 col-6 p-1"
+                >
+                  <div
+                    className="card section-img"
+                    style={{ backgroundImage: `url(${el.img})` }}
+                  >
+                    <div className="section-des">
+                      <h5 className="card-title text-center mt-5">
+                        {el.title}
+                      </h5>
+                      <p
+                        className="card-text px-5 text-center"
+                        style={{ color: "rgb(55 6 6)" }}
+                      >
+                        {el.des}
+                      </p>
+                    </div>
+                    <h5 className="services-title">{el.title}</h5>
+                  </div>
+                </div>
+              ))}
+        </div>
       </div>
+      <Footer />
     </>
   );
 };
