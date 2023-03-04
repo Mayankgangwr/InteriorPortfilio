@@ -10,12 +10,12 @@ const settings = {
   infinite: true,
   draggAble: true,
   swipeAble: true,
-  customTransition: "all ease 1.5s",
+  customTransition: "all ease 2.5s",
   transitionDuration: 0,
   showDots: false,
   emulateTouch: true,
   autoPlay: true,
-  autoPlaySpeed: 1500,
+  autoPlaySpeed: 2500,
   responsive: {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -35,11 +35,6 @@ const settings = {
   },
 };
 const Home = () => {
-  const [recent, setRecent] = useState([]);
-  const [upcoming, setUpComing] = useState([]);
-  const [topRated, setTopRated] = useState([]);
-  const [popular, setPopular] = useState([]);
-  const [allmovie, setAllmovie] = useState([]);
   const [slider, setSlider] = useState([
     {
       id: 1,
@@ -62,6 +57,78 @@ const Home = () => {
       alt: "img4",
     },
   ]);
+  const [service, setService] = useState([
+    {
+      id: 1,
+      title: "Interior",
+      img: "./imgs/pexels-huseyn-kamaladdin-667838.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img1",
+    },
+    {
+      id: 2,
+      title: "Interior",
+      img: "./imgs/pexels-jean-van-der-meulen-1457842.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img2",
+    },
+    {
+      id: 3,
+      title: "Interior",
+      img: "./imgs/pexels-lisa-fotios-1090638.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img3",
+    },
+    {
+      id: 4,
+      title: "Interior",
+      img: "./imgs/pexels-pixabay-276724.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img4",
+    },
+    {
+      id: 5,
+      title: "Interior",
+      img: "./imgs/pexels-vecislavas-popa-1571453.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img5",
+    },
+    {
+      id: 6,
+      title: "Interior",
+      img: "./imgs/pexels-vecislavas-popa-1571459.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img6",
+    },
+    {
+      id: 7,
+      title: "Interior",
+      img: "./imgs/pexels-vecislavas-popa-1571460.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img7",
+    },
+    {
+      id: 8,
+      title: "Interior",
+      img: "./imgs/pexels-vecislavas-popa-1643383.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img8",
+    },
+    {
+      id: 9,
+      title: "Interior",
+      img: "./imgs/pexels-pixabay-271624.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img9",
+    },
+    {
+      id: 10,
+      title: "Interior",
+      img: "./imgs/pexels-pixabay-271795.jpg",
+      des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
+      alt: "img10",
+    },
+  ]);
   return (
     <>
       <Nav />
@@ -75,19 +142,31 @@ const Home = () => {
             </div>
           ))}
       </Carousel>
-      <div className="container-fluid">
+      <div className="container-fluid pb-5">
         <h2 className="text-center my-3 logo">
           <b className="section-title px-3">Services</b>
         </h2>
         <div className="row p-0">
-          {slider.length > 0 &&
-            slider.map((el) => (
-              <div key={el.id} className="col-lg-3 col-md-4 col-sm-4 col-6 p-1">
+          {service.length > 0 &&
+            service.map((el) => (
+              <div
+                key={el.id}
+                className="section-col col-lg-2 col-md-3 col-sm-4 col-6 p-1"
+              >
                 <div
-                  className="card slider-img"
+                  className="card section-img"
                   style={{ backgroundImage: `url(${el.img})` }}
                 >
-                  <h4 className="services-title">{`Interior`}</h4>
+                  <div className="section-des">
+                    <h5 className="card-title text-center mt-5">{el.title}</h5>
+                    <p
+                      className="card-text px-5 text-center"
+                      style={{ color: "rgb(55 6 6)" }}
+                    >
+                      {el.des}
+                    </p>
+                  </div>
+                  <h5 className="services-title">{el.title}</h5>
                 </div>
               </div>
             ))}
