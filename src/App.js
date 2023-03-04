@@ -6,9 +6,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Nav />}>
-            <Route index element={<Home />} />
-          </Route>
+          <Route index element={<Home />} />
         </Routes>
       </BrowserRouter>
     </>
