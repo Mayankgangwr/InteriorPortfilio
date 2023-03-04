@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./nav.css";
 const Nav = () => {
-  const links = [
-    "bollywood",
-    "hollywood",
-    "south movies",
-    "dubbed movies",
-    "upcoming",
-    "popular",
-  ];
+  const links = ["home", "services", "products", "contact", "about"];
   const navigate = useNavigate();
   const [searchdata, setSearchdata] = useState("");
   const handleSearch = (e) => {
@@ -23,15 +16,15 @@ const Nav = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-light-black px-0 m-pading">
+      <nav
+        className="navbar navbar-expand-lg navbar-dark bg-light-black px-0 m-pading"
+        style={{ paddingTop: "0px", paddingBottom: "0px" }}
+      >
         <div className="container-fluid">
           <a className="navbar-brand mt-2 mt-lg-0 d-mobile" href="#">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-              height="15"
-              alt="MDB Logo"
-              loading="lazy"
-            />
+            <h4 className="my-auto logo">
+              <b>Interior Design</b>
+            </h4>
           </a>
           <div className="dropdown ms-3 mt-1 d-mobile">
             <a
@@ -65,12 +58,9 @@ const Nav = () => {
             id="navbarSupportedContent"
           >
             <a className="navbar-brand mt-2 mt-lg-0" href="#">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                height="15"
-                alt="MDB Logo"
-                loading="lazy"
-              />
+              <h4 className="my-auto logo">
+                <b>Interior Design</b>
+              </h4>
             </a>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {links.map((el) => (

@@ -40,21 +40,28 @@ const Home = () => {
   const [topRated, setTopRated] = useState([]);
   const [popular, setPopular] = useState([]);
   const [allmovie, setAllmovie] = useState([]);
-  const [slider, setSlider] = useState([]);
-  useEffect(() => {
-    getMovie();
-  }, []);
-  function getMovie() {
-    axios
-      .get(`https://sattasafari.com/hotstar/read.php`)
-      .then(function (response) {
-        const slide = response.data.filter((item) => {
-          return item.tag.includes("slider");
-        });
-        setSlider(slide);
-        setAllmovie(response.data);
-      });
-  }
+  const [slider, setSlider] = useState([
+    {
+      id: 1,
+      img: "./imgs/pexels-huseyn-kamaladdin-667838.jpg",
+      alt: "img1",
+    },
+    {
+      id: 2,
+      img: "./imgs/pexels-jean-van-der-meulen-1457842.jpg",
+      alt: "img2",
+    },
+    {
+      id: 3,
+      img: "./imgs/pexels-lisa-fotios-1090638.jpg",
+      alt: "img3",
+    },
+    {
+      id: 4,
+      img: "./imgs/pexels-pixabay-276724.jpg",
+      alt: "img4",
+    },
+  ]);
   return (
     <>
       <Nav />
@@ -62,17 +69,30 @@ const Home = () => {
         {slider.length > 0 &&
           slider.map((el) => (
             <div key={el.id} className="card">
-              <div className="card-body p-1">
-                <Link to={`/movie/${el.id}`}>
-                  <img
-                    src="./imgs/pexels-huseyn-kamaladdin-667838.jpg"
-                    className="slider-img"
-                  />
-                </Link>
+              <div className="card-body py-0 px-1">
+                <img src={el.img} className="slider-img" />
               </div>
             </div>
           ))}
       </Carousel>
+      <div className="container-fluid">
+        <h2 className="text-center my-3 logo">
+          <b className="section-title px-3">Services</b>
+        </h2>
+        <div className="row p-0">
+          {slider.length > 0 &&
+            slider.map((el) => (
+              <div key={el.id} className="col-lg-3 col-md-4 col-sm-4 col-6 p-1">
+                <div
+                  className="card slider-img"
+                  style={{ backgroundImage: `url(${el.img})` }}
+                >
+                  <h4 className="services-title">{`Interior`}</h4>
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
     </>
   );
 };

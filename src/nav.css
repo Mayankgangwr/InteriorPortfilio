@@ -1,3 +1,8 @@
+.logo {
+  background: -webkit-linear-gradient(rgb(57 29 65), rgb(237 59 59));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .d-mobile {
   display: none !important;
 }
