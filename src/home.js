@@ -61,11 +61,11 @@ const Home = () => {
       <Carousel {...settings}>
         {slider.length > 0 &&
           slider.map((el) => (
-            <div key={el.id} className="card mx-1 mt-1">
+            <div key={el.id} className="card">
               <div className="card-body p-1">
                 <Link to={`/movie/${el.id}`}>
                   <img
-                    src="/img/pexels-huseyn-kamaladdin-667838.jpg"
+                    src="./imgs/pexels-huseyn-kamaladdin-667838.jpg"
                     className="slider-img"
                   />
                 </Link>
