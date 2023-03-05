@@ -51,7 +51,7 @@ const Home = () => {
       id: 2,
       img: "./imgs/pexels-jean-van-der-meulen-1457842.jpg",
       alt: "img2",
-      bg: "linear-gradient(to right top, #5d6f89, #477d90, #418a88, #5b9274, #85965f)",
+      bg1: "linear-gradient(to right top, #5d6f89, #477d90, #418a88, #5b9274, #85965f)",
       bg1: "linear-gradient(to bottom, #d85cc8, #c95bce, #b85bd4, #a45bd9, #8e5cde)",
       heading: "It's My Best Work Of My Designing Career",
       line: "Culture Shapes values. Values Determine The Future.",

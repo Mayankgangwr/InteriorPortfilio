@@ -3,30 +3,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.nav {
-  padding-bottom: 0%;
-  padding-top: 0%;
-
-  background: linear-gradient(
-    to bottom,
-    #a06bd1,
-    #ae69c9,
-    #b968c0,
-    #c368b8,
-    #ca69b0,
-    #bd74bd,
-    #af7ec7,
-    #a187ce,
-    #7798d6,
-    #5da4cc,
-    #63abbb,
-    #7baeaa
-  );
-  font-weight: 100;
-}
-.nav-text {
-  color: #000;
-}
 .d-mobile {
   display: none !important;
 }

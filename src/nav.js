@@ -16,7 +16,15 @@ const Nav = () => {
   };
   return (
     <>
-      <nav className="nav navbar navbar-expand-lg navbar-dark px-0 m-pading">
+      <nav
+        className="navbar navbar-expand-lg navbar-dark bg-light-black px-0 m-pading"
+        style={{
+          paddingTop: "0px",
+          paddingBottom: "0px",
+          background:
+            "linear-gradient(110deg, #fdcd3b 40%, #494120 40%, #ffed4b 40%)",
+        }}
+      >
         <div className="container-fluid">
           <a className="navbar-brand mt-2 mt-lg-0 d-mobile" href="#">
             <h4 className="my-auto logo">
@@ -41,7 +49,7 @@ const Nav = () => {
               {links.map((el) => (
                 <li>
                   <Link
-                    className="dropdown-item text-capitalize nav-text"
+                    className="dropdown-item text-capitalize text-light"
                     to={`/list/${el}`}
                   >
                     {el}
