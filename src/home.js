@@ -11,12 +11,12 @@ const settings = {
   infinite: true,
   draggAble: true,
   swipeAble: true,
-  customTransition: "all ease 2.5s",
+  customTransition: "all ease 3.5s",
   transitionDuration: 0,
   showDots: false,
   emulateTouch: true,
   autoPlay: true,
-  autoPlaySpeed: 2500,
+  autoPlaySpeed: 3500,
   responsive: {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -41,21 +41,41 @@ const Home = () => {
       id: 1,
       img: "./imgs/pexels-huseyn-kamaladdin-667838.jpg",
       alt: "img1",
+      bg: "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)",
+      heading: "It's My Best Work Of My Designing Career",
+      line: "Culture Shapes values. Values Determine The Future.",
+      btn: "Book Now",
+      btn1: "More Info",
     },
     {
       id: 2,
       img: "./imgs/pexels-jean-van-der-meulen-1457842.jpg",
       alt: "img2",
+      bg: "linear-gradient(to bottom, #d85cc8, #c95bce, #b85bd4, #a45bd9, #8e5cde);",
+      heading: "It's My Best Work Of My Designing Career",
+      line: "Culture Shapes values. Values Determine The Future.",
+      btn: "Book Now",
+      btn1: "More Info",
     },
     {
       id: 3,
       img: "./imgs/pexels-lisa-fotios-1090638.jpg",
       alt: "img3",
+      bg: "linear-gradient(to right bottom, #362d37, #5f404a, #865650, #9f7550, #a39c59)",
+      heading: "It's My Best Work Of My Designing Career",
+      line: "Culture Shapes values. Values Determine The Future.",
+      btn: "Book Now",
+      btn1: "More Info",
     },
     {
       id: 4,
       img: "./imgs/pexels-pixabay-276724.jpg",
       alt: "img4",
+      bg: "linear-gradient(to right top, #9f68a4, #c76689, #d67267, #cc8a4c, #aea548)",
+      heading: `It's My Best Work Of My  Designing Career`,
+      line: "Culture Shapes values. Values Determine The Future.",
+      btn: "Book Now",
+      btn1: "More Info",
     },
   ]);
   const [service, setService] = useState([
@@ -133,7 +153,7 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <Carousel {...settings}>
+      {/*      <Carousel {...settings}>
         {slider.length > 0 &&
           slider.map((el) => (
             <div key={el.id} className="card">
@@ -142,8 +162,81 @@ const Home = () => {
               </div>
             </div>
           ))}
-      </Carousel>
-      <div className="container-fluid pb-5">
+      </Carousel>*/}
+      <div className="container-fluid  pb-5 mt-2 px-0">
+        <div className="row">
+          <div className="col-12">
+            <Carousel {...settings}>
+              {slider.length > 0 &&
+                slider.map((el) => (
+                  <div
+                    key={el.id}
+                    className="row"
+                    style={{
+                      background: el.bg,
+                      borderRadius: "15px",
+                      marginRight: "5px",
+                      marginLeft: "5px",
+                    }}
+                  >
+                    <div className="col-lg-5 col-md-6 col-sm-6 col-12">
+                      <div className="card banner-card mt-3 mx-1 mb-4 m-lg-5 m-md-5">
+                        <img
+                          className="banner-img"
+                          src={el.img}
+                          alt="banner-image"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-7 col-md-6 col-sm-6 col-12">
+                      <h1
+                        className="mt-3 mt-md-5 mt-lg-5 ms-5"
+                        style={{ color: "#000" }}
+                      >
+                        {el.heading}
+                      </h1>
+                      <p className="bold ms-5 mt-4" style={{ color: "#000" }}>
+                        {el.line}
+                      </p>
+                      <hr className="mx-5 mt-4" />
+                      <div className="d-flex justify-content-center mt-4 mb-5">
+                        <button
+                          type="button"
+                          class="btn text-white1 me-3"
+                          style={{ background: "#051937" }}
+                          data-mdb-ripple-color="dark"
+                        >
+                          {el.btn}
+                        </button>
+                        <button
+                          type="button"
+                          class="btn ms-3"
+                          style={{
+                            border: "2px solid #051937",
+                            color: "#051937",
+                            fontSize: "13px",
+                            fontWeight: "bolder",
+                          }}
+                          data-mdb-ripple-color="dark"
+                        >
+                          {el.btn1}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </Carousel>
+          </div>
+        </div>
+      </div>
+      <div
+        className="container-fluid  pb-5"
+        style={{
+          background:
+            "linear-gradient(110deg, #fdcd3b 40%, #494120 40%, #ffed4b 40%)",
+          marginTop: "-18px",
+        }}
+      >
         <h2 className="text-center my-3 logo">
           <b className="section-title px-3">Services</b>
         </h2>
@@ -158,14 +251,21 @@ const Home = () => {
                   className="card section-img"
                   style={{ backgroundImage: `url(${el.img})` }}
                 >
-                  <div className="section-des">
-                    <h5 className="card-title text-center mt-5">{el.title}</h5>
+                  <div className="section-des justify-contact-center">
+                    <h5 className="card-title text-center mt-4">{el.title}</h5>
                     <p
-                      className="card-text px-5 text-center"
+                      className="card-text px-2 text-center"
                       style={{ color: "rgb(55 6 6)" }}
                     >
                       {el.des}
                     </p>
+                    <a
+                      className="text-center m-auto"
+                      href="#"
+                      style={{ color: "#a30505" }}
+                    >
+                      More Info
+                    </a>
                   </div>
                   <h5 className="services-title">{el.title}</h5>
                 </div>

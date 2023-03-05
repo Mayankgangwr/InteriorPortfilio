@@ -18,7 +18,12 @@ const Nav = () => {
     <>
       <nav
         className="navbar navbar-expand-lg navbar-dark bg-light-black px-0 m-pading"
-        style={{ paddingTop: "0px", paddingBottom: "0px" }}
+        style={{
+          paddingTop: "0px",
+          paddingBottom: "0px",
+          background:
+            "linear-gradient(110deg, #fdcd3b 40%, #494120 40%, #ffed4b 40%)",
+        }}
       >
         <div className="container-fluid">
           <a className="navbar-brand mt-2 mt-lg-0 d-mobile" href="#">

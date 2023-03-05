@@ -1,4 +1,4 @@
--body {
+body {
 }
 .react-multiple-carousel__arrow {
   display: none;
@@ -11,6 +11,11 @@
   color: #fff !important;
   font-size: large;
   font-weight: bolder;
+}
+.text-white1 {
+  color: #fff !important;
+  font-size: 13px;
+  font-weight: 400;
 }
 .p-2-px {
   padding: 2px !important;
@@ -62,7 +67,6 @@
 .section-title {
   height: 380px;
   padding: 20px;
-  text-decoration: underline rgb(68 34 67) 6px;
 }
 @media screen and (min-width: 1000px) {
   .section-col {
@@ -91,4 +95,25 @@
 }
 .section-col:hover .section-des {
   display: grid;
+}
+.banner-bg-img {
+  height: 260px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 260px;
+}
+hr {
+  color: #000;
+  padding: 0px;
+  line-height: 1px;
+  border-top: 2px solid;
+  opacity: 1.25;
+}
+.banner-card {
+  border-radius: 15px;
+}
+.banner-img {
+  height: 260px;
+  width: 100%;
+  border-radius: 15px;
 }
