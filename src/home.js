@@ -51,7 +51,7 @@ const Home = () => {
       id: 2,
       img: "./imgs/pexels-jean-van-der-meulen-1457842.jpg",
       alt: "img2",
-      bg1: "linear-gradient(to right top, #5d6f89, #477d90, #418a88, #5b9274, #85965f)",
+      bg: "linear-gradient(to right top, #5d6f89, #477d90, #418a88, #5b9274, #85965f)",
       bg1: "linear-gradient(to bottom, #d85cc8, #c95bce, #b85bd4, #a45bd9, #8e5cde)",
       heading: "It's My Best Work Of My Designing Career",
       line: "Culture Shapes values. Values Determine The Future.",
@@ -164,7 +164,7 @@ const Home = () => {
             </div>
           ))}
       </Carousel>*/}
-      <div className="container-fluid  pb-5 mt-2 px-0">
+      <div className="container-fluid  pb-5 px-0" style={{ marginTop: "53px" }}>
         <div className="row">
           <div className="col-12">
             <Carousel {...settings}>
@@ -231,22 +231,27 @@ const Home = () => {
         </div>
       </div>
       <div
-        className="container-fluid  pb-5"
+        className="container-fluid  pb-5 px-0"
         style={{
-          background:
-            "linear-gradient(110deg, #fdcd3b 40%, #494120 40%, #ffed4b 40%)",
           marginTop: "-18px",
         }}
       >
-        <h2 className="text-center my-3 logo">
-          <b className="section-title px-3">Services</b>
-        </h2>
-        <div className="row p-0">
+        <div
+          className="row pb-5 pt-2 section"
+          style={{
+            background:
+              "linear-gradient(to right top, #d16ba5, #b96dab, #9f6ead, #866faa, #6f6ea3, #6d6ea5, #6b6fa7, #696fa9, #7e6fb6, #986dbe, #b569c1, #d362bf)",
+          }}
+        >
+          <h2 className="text-center my-3 logo">
+            <b className="section-title px-3">Services</b>
+          </h2>
+
           {service.length > 0 &&
             service.slice(0, 4).map((el) => (
               <div
                 key={el.id}
-                className="section-col col-lg-2 col-md-3 col-sm-4 col-6 p-1"
+                className="section-col col-lg-3 col-md-4 col-sm-6 col-12 p-1"
               >
                 <div
                   className="card section-img"
@@ -273,17 +278,23 @@ const Home = () => {
               </div>
             ))}
         </div>
-        <h2 className="text-center my-3 logo">
-          <b className="section-title px-3">Products</b>
-        </h2>
-        <div className="row p-0">
+        <div
+          className="row pb-5 pt-2 mt-5 section"
+          style={{
+            background:
+              "linear-gradient(to right top, #976456, #9e7358, #a2825d, #a49266, #a4a272, #a0a97a, #9db084, #99b78f, #94b795, #8fb79a, #8cb69f, #8ab5a4)",
+          }}
+        >
+          <h2 className="text-center my-3 logo">
+            <b className="section-title px-3">Products</b>
+          </h2>
           {service.length > 0 &&
             service
               .sort((a, b) => b.id - a.id)
               .map((el) => (
                 <div
                   key={el.id}
-                  className="section-col col-lg-2 col-md-3 col-sm-4 col-6 p-1"
+                  className="section-col col-lg-3 col-md-4 col-sm-6 col-12 p-1"
                 >
                   <div
                     className="card section-img"

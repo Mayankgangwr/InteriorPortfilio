@@ -1,7 +1,20 @@
 .logo {
-  background: -webkit-linear-gradient(rgb(57 29 65), rgb(237 59 59));
+  background: -webkit-linear-gradient(rgb(22 2 28), rgb(79 11 11));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.nav-text {
+  color: #000 !important;
+}
+.nav-bg {
+  background-image: linear-gradient(
+    to left top,
+    #3c6ca7,
+    #346299,
+    #3b5e88,
+    #3b5c83,
+    #235ea5
+  );
 }
 .d-mobile {
   display: none !important;

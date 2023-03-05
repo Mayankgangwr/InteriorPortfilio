@@ -17,12 +17,10 @@ const Nav = () => {
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg navbar-dark bg-light-black px-0 m-pading"
+        className="navbar navbar-expand-lg fixed-top navbar-dark nav-bg px-0 m-pading"
         style={{
           paddingTop: "0px",
           paddingBottom: "0px",
-          background:
-            "linear-gradient(110deg, #fdcd3b 40%, #494120 40%, #ffed4b 40%)",
         }}
       >
         <div className="container-fluid">
@@ -33,14 +31,14 @@ const Nav = () => {
           </a>
           <div className="dropdown ms-3 mt-1 d-mobile">
             <a
-              className="text-reset me-2 dropdown-toggle hidden-arrow"
+              className="text-reset me-2 dropdown-toggle hidden-arrow "
               href="#"
               id="navbarDropdownMenuLink"
               role="button"
               data-mdb-toggle="dropdown"
               aria-expanded="false"
             >
-              <i className="fas fa-bars"></i>
+              <i className="fas fa-bars nav-text"></i>
             </a>
             <ul
               className="dropdown-menu dropdown-menu-end  bg-dark"
@@ -70,7 +68,10 @@ const Nav = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {links.map((el) => (
                 <li className="nav-item">
-                  <a className="nav-link text-capitalize" href={`/list/${el}`}>
+                  <a
+                    className="nav-link text-capitalize nav-text"
+                    href={`/list/${el}`}
+                  >
                     {el}
                   </a>
                 </li>
