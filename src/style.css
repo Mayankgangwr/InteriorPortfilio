@@ -90,5 +90,5 @@
   display: none;
 }
 .section-col:hover .section-des {
-  display: block;
+  display: grid;
 }

@@ -37,11 +37,12 @@ const Footer = () => {
                   className="text-uppercase d-flex footer-title fw-bold mb-2"
                   style={{ color: "#000" }}
                 >
-                  MY<div style={{ color: "rgb(255 255 255)" }}>RESTRO</div>
+                  INTERIOR
+                  <div style={{ color: "rgb(255 255 255)" }}>DESIGN</div>
                 </h6>
                 <p className="footer-text-color">
-                  India's First Free POS, Billing Software for Restraurent with
-                  QR Menu Ordering System.
+                  Hey Guys This Is Best Architect Here I am Expert in this Feild
+                  So please just give me a change for your work
                 </p>
               </div>
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -102,8 +103,8 @@ const Footer = () => {
                   Contact
                 </h6>
                 <p className="footer-text-color">
-                  <i className="fas fa-home me-3"></i> Vill. Mekpur kalan Bhuta
-                  Bareilly U.P India 243503
+                  <i className="fas fa-home me-3"></i> Bhuta Bareilly U.P India
+                  243503
                 </p>
                 <p className="footer-text-color">
                   <i className="fas fa-envelope me-3"></i>info@myrestro.co.in
@@ -120,11 +121,8 @@ const Footer = () => {
         </section>
         <div className="text-center footer-text-color p-4 border-top">
           © 2023 Copyright:
-          <a
-            className="footer-text-color fw-bold"
-            href="https://myrestro.co.in/"
-          >
-            myrestro.co.in
+          <a className="footer-text-color fw-bold" href="#">
+            interiordesginer.com
           </a>
         </div>
       </footer>

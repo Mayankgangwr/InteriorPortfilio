@@ -188,16 +188,23 @@ const Home = () => {
                     className="card section-img"
                     style={{ backgroundImage: `url(${el.img})` }}
                   >
-                    <div className="section-des">
-                      <h5 className="card-title text-center mt-5">
+                    <div className="section-des justify-contact-center">
+                      <h5 className="card-title text-center mt-4">
                         {el.title}
                       </h5>
                       <p
-                        className="card-text px-5 text-center"
+                        className="card-text px-2 text-center"
                         style={{ color: "rgb(55 6 6)" }}
                       >
                         {el.des}
                       </p>
+                      <a
+                        className="text-center m-auto"
+                        href="#"
+                        style={{ color: "#a30505" }}
+                      >
+                        More Info
+                      </a>
                     </div>
                     <h5 className="services-title">{el.title}</h5>
                   </div>
