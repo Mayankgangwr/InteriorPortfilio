@@ -1,17 +1,15 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
-import Home from "./home";
-import Nav from "./nav";
-const App = () => {
+import Nav from "./Navbar/nav";
+import Nav1 from "./Navbar/nav1";
+import Nav2 from './Navbar/nav2';
+import Banner1 from "./banner1";
+function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="nav" element={<Nav />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
-};
+          <>
+            <Nav/>
+            <Nav1/>
+            <Nav2/>
+            <Banner1/>
+          </>
+        );
+}
 export default App;

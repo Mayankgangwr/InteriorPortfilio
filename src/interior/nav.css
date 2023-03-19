@@ -7,13 +7,19 @@
   color: #000 !important;
 }
 .nav-bg {
-  background-image: linear-gradient(
+  background: linear-gradient(
     to left top,
     #3c6ca7,
     #346299,
     #3b5e88,
     #3b5c83,
     #235ea5
+  );
+  background: linear-gradient(
+    110deg,
+    rgb(253, 205, 59) 40%,
+    rgb(73, 65, 32) 40%,
+    rgb(255, 237, 75) 40%
   );
 }
 .d-mobile {
