@@ -399,7 +399,7 @@ const Home = () => {
             ></iframe>
           </div>
           <div className="col-lg-6 col-md-6 col-12 text-light">
-            <form>
+            <form className="mt-3">
               <div className="d-grid">
                 <label for="name">Name</label>
                 <input
@@ -419,13 +419,26 @@ const Home = () => {
                 />
               </div>
               <div className="d-grid my-3">
+                <label for="mobile">Mobile Number</label>
+                <input
+                  type="text"
+                  id="mobile"
+                  className="form-control"
+                  placeholder="Enter your mobile number"
+                />
+              </div>
+              <div className="d-grid my-3">
                 <label for="message">Message</label>
                 <textarea
                   id="message"
                   cols="100"
+                  rows="4"
                   className="form-control"
                   placeholder="Enter message"
                 ></textarea>
+              </div>
+              <div className="d-grid my-3">
+                <button className="btn btn-danger">Submit</button>
               </div>
             </form>
           </div>
