@@ -37,11 +37,11 @@ const Footer = () => {
                   className="text-uppercase d-flex footer-title fw-bold mb-2"
                   style={{ color: "#000" }}
                 >
-                  INTERIOR
-                  <div style={{ color: "rgb(255 255 255)" }}>DESIGN</div>
+                  My
+                  <div style={{ color: "rgb(255 255 255)" }}>Restro</div>
                 </h6>
                 <p className="footer-text-color">
-                  Hey Guys This Is Best Architect Here I am Expert in this Feild
+                  Hey Guys This Is Best Place Here We are Expert in this Feild
                   So please just give me a change for your work
                 </p>
               </div>
@@ -121,8 +121,11 @@ const Footer = () => {
         </section>
         <div className="text-center footer-text-color p-4 border-top">
           © 2023 Copyright:
-          <a className="footer-text-color fw-bold" href="#">
-            interiordesginer.com
+          <a
+            className="footer-text-color fw-bold"
+            href="https://restroweb.myrestro.co.in/"
+          >
+            restroweb.myrestro.co.in
           </a>
         </div>
       </footer>
