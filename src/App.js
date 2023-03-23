@@ -1,15 +1,17 @@
-import Nav from "./Navbar/nav";
-import Nav1 from "./Navbar/nav1";
-import Nav2 from './Navbar/nav2';
-import Banner1 from "./banner1";
-function App() {
+import React from "react";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import Home from "./home";
+import Nav from "./nav";
+const Apps = () => {
   return (
-          <>
-            <Nav/>
-            <Nav1/>
-            <Nav2/>
-            <Banner1/>
-          </>
-        );
-}
-export default App;
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="nav" element={<Nav />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+};
+export default Apps;

@@ -1,0 +1,21 @@
+.footer-section {
+  background: linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%),
+    linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+  background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%),
+    radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
+}
+.footer-text-color {
+  color: #fff;
+  font-weight: lighter;
+}
+p {
+  margin-bottom: 4px !important;
+}
+.footer-title {
+  justify-content: left;
+}
+@media screen and (max-width: 500px) {
+  .footer-title {
+    justify-content: center;
+  }
+}
