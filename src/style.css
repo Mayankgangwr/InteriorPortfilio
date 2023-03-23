@@ -127,4 +127,22 @@ hr {
 .food-logo {
   width: 70px !important;
   height: 70px !important;
+  border-radius: 8px;
+}
+.mrp {
+  color: #535665;
+  text-decoration: line-through;
+}
+.price {
+  font-size: 16px;
+  font-weight: 500;
+}
+.h-90 {
+  height: 90% !important;
+}
+.pt-2px {
+  padding-top: 2px !important;
+}
+.p-qty {
+  padding: 7px 13px 19px 13px !important;
 }
