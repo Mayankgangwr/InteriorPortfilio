@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./nav.css";
 const Nav = () => {
-  const links = ["home", "services", "products", "contact", "about"];
+  const links = ["home", "services", "Menu", "contact", "about"];
   const navigate = useNavigate();
   const [searchdata, setSearchdata] = useState("");
   const handleSearch = (e) => {
@@ -26,7 +26,7 @@ const Nav = () => {
         <div className="container-fluid">
           <a className="navbar-brand mt-2 mt-lg-0 d-mobile" href="#">
             <h4 className="my-auto logo">
-              <b>Interior Design</b>
+              <b>My Restro</b>
             </h4>
           </a>
           <div className="dropdown ms-3 mt-1 d-mobile">
@@ -62,7 +62,7 @@ const Nav = () => {
           >
             <a className="navbar-brand mt-2 mt-lg-0" href="#">
               <h4 className="my-auto logo">
-                <b>Interior Design</b>
+                <b>My Restro</b>
               </h4>
             </a>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">

@@ -39,72 +39,72 @@ const Home = () => {
   const [slider, setSlider] = useState([
     {
       id: 1,
-      img: "../imgs/pexels-huseyn-kamaladdin-667838.jpg",
+      img: "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_960_720.jpg",
       alt: "img1",
       bg: "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)",
       heading: "It's My Best Work Of My Designing Career",
       line: "Culture Shapes values. Values Determine The Future.",
-      btn: "Book Now",
-      btn1: "More Info",
+      btn: "Order Now",
+      btn1: "just in 120",
     },
     {
       id: 2,
-      img: "../imgs/pexels-jean-van-der-meulen-1457842.jpg",
+      img: "https://cdn.pixabay.com/photo/2018/01/31/09/57/coffee-3120750__340.jpg",
       alt: "img2",
       bg: "linear-gradient(to right top, #5d6f89, #477d90, #418a88, #5b9274, #85965f)",
       bg1: "linear-gradient(to bottom, #d85cc8, #c95bce, #b85bd4, #a45bd9, #8e5cde)",
       heading: "It's My Best Work Of My Designing Career",
       line: "Culture Shapes values. Values Determine The Future.",
-      btn: "Book Now",
-      btn1: "More Info",
+      btn: "Order Now",
+      btn1: "just in 130",
     },
     {
       id: 3,
-      img: "../imgs/pexels-lisa-fotios-1090638.jpg",
+      img: "https://cdn.pixabay.com/photo/2020/03/15/23/05/momos-4935232_960_720.jpg",
       alt: "img3",
       bg: "linear-gradient(to right bottom, #362d37, #5f404a, #865650, #9f7550, #a39c59)",
       heading: "It's My Best Work Of My Designing Career",
       line: "Culture Shapes values. Values Determine The Future.",
-      btn: "Book Now",
-      btn1: "More Info",
+      btn: "Order Now",
+      btn1: "just in 150",
     },
     {
       id: 4,
-      img: "../imgs/pexels-pixabay-276724.jpg",
+      img: "https://static.toiimg.com/photo/94078477.cms",
       alt: "img4",
       bg: "linear-gradient(to right top, #9f68a4, #c76689, #d67267, #cc8a4c, #aea548)",
       heading: `It's My Best Work Of My  Designing Career`,
       line: "Culture Shapes values. Values Determine The Future.",
-      btn: "Book Now",
-      btn1: "More Info",
+      btn: "Order Now",
+      btn1: "just in 100",
     },
   ]);
   const [service, setService] = useState([
     {
       id: 1,
-      title: "Interior",
-      img: "../imgs/pexels-huseyn-kamaladdin-667838.jpg",
+      title: "QR Order",
+      img: "https://www.ordermate.com.au/hubfs/banner-table-ordering-mobile3.jpg",
       des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
       alt: "img1",
     },
     {
       id: 2,
-      title: "Interior",
-      img: "../imgs/pexels-jean-van-der-meulen-1457842.jpg",
+      title: "Fresh Meals",
+      img: "https://img.freepik.com/premium-photo/cooking-fresh-meals-using-modern-multi-cooker-home_122732-1497.jpg",
       des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
       alt: "img2",
     },
     {
       id: 3,
-      title: "Interior",
-      img: "../imgs/pexels-lisa-fotios-1090638.jpg",
+      title: "Digital Bill",
+      img: "https://cdn3.vectorstock.com/i/1000x1000/59/07/digital-bill-flat-concept-icon-payment-vector-26155907.jpg",
       des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
       alt: "img3",
     },
     {
       id: 4,
-      title: "Interior",
-      img: "../imgs/pexels-pixabay-276724.jpg",
+      title: "Quality Food",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpUaC1R6DfQwUJfg5e2ElljyE3464NVjw_5xBXY0E2nZVlS-VMKvlm657S6VMKIWGl9yI&usqp=CAU",
       des: "Some quick example text to build on the card title and make up the bulk of the cards content.",
       alt: "img4",
     },
@@ -277,6 +277,39 @@ const Home = () => {
                 </div>
               </div>
             ))}
+        </div>
+        <div
+          className="row pb-5 pt-2 mt-5 section"
+          style={{
+            background:
+              "linear-gradient(to right top, #976456, #9e7358, #a2825d, #a49266, #a4a272, #a0a97a, #9db084, #99b78f, #94b795, #8fb79a, #8cb69f, #8ab5a4)",
+          }}
+        >
+          <h2 className="text-center my-3 logo">
+            <b className="section-title px-3">Menu</b>
+          </h2>
+                <div
+                  className="section-col col-xl-3 card-item col-lg-4 col-md-6 col-sm-6 col-xs-6 col-12 mt-3"
+                >
+                   <div className="card">
+                   <div className="card-body p-2">
+                      <div className="d-flex text-black p-0">
+                         <img src="https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                           alt="Generic placeholder image" className="food-logo" />    
+                         <div className='row ps-3'> 
+                              <div className='col-12'>
+                                   <h6 className='text-start'>Pizza</h6>
+                              </div>
+                              <div className='col-12'>
+                                 <span className='price sale-price pe-2'>$100</span>
+                                 <span className='price mrp'>$125</span>
+                              </div>
+                         </div>
+                      </div>
+                   </div>
+               </div>
+                </div>
+           
         </div>
         <div
           className="row pb-5 pt-2 mt-5 section"
