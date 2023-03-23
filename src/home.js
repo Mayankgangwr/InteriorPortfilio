@@ -6,7 +6,6 @@ import "./style.css";
 import Nav from "./nav";
 import Footer from "./footer";
 import { Outlet, Link } from "react-router-dom";
-
 const settings = {
   infinite: true,
   draggAble: true,
@@ -151,6 +150,8 @@ const Home = () => {
       alt: "img10",
     },
   ]);
+  const cat = ["Break Fast", "Lunch", "Dinner", "Fast Food", "Drinks"];
+  const food = [1, 2, 3];
   return (
     <>
       <Nav />
@@ -237,7 +238,55 @@ const Home = () => {
         }}
       >
         <div
-          className="row pb-5 pt-2 section"
+          className="row pb-3 pt-2 mt-5 section"
+          style={{
+            background:
+              "linear-gradient(to right top, #976456, #9e7358, #a2825d, #a49266, #a4a272, #a0a97a, #9db084, #99b78f, #94b795, #8fb79a, #8cb69f, #8ab5a4)",
+          }}
+        >
+          <h2 className="text-center my-3 logo">
+            <b className="section-title px-3">Menu</b>
+          </h2>
+          {cat.map((el) => (
+            <>
+              <h6 className="logo mt-2 mb-1">
+                <b className="section-title px-3">{el}</b>
+              </h6>
+              {food.map((el) => (
+                <div
+                  key={el}
+                  className="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-12 mt-2"
+                >
+                  <div className="card">
+                    <div className="card-body p-2">
+                      <div className="d-flex text-black p-0">
+                        <img
+                          src="https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          alt="Generic placeholder image"
+                          className="food-logo"
+                        />
+                        <div className="row ps-3">
+                          <div className="col-12">
+                            <h6 className="text-start">Pizza</h6>
+                          </div>
+                          <div className="col-12">
+                            <span className="price sale-price pe-2">₹100</span>
+                            <span className="price mrp">₹125</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </>
+          ))}
+          <button className="btn btn-primary mx-auto px-1 mt-3 w-25">
+            View More
+          </button>
+        </div>
+        <div
+          className="row pb-5 pt-2 mt-5 section"
           style={{
             background:
               "linear-gradient(to right top, #d16ba5, #b96dab, #9f6ead, #866faa, #6f6ea3, #6d6ea5, #6b6fa7, #696fa9, #7e6fb6, #986dbe, #b569c1, #d362bf)",
@@ -281,80 +330,105 @@ const Home = () => {
         <div
           className="row pb-5 pt-2 mt-5 section"
           style={{
-            background:
-              "linear-gradient(to right top, #976456, #9e7358, #a2825d, #a49266, #a4a272, #a0a97a, #9db084, #99b78f, #94b795, #8fb79a, #8cb69f, #8ab5a4)",
+            backgroundColor: "#FBAB7E",
+            backgroundImage:
+              "linear-gradient(62deg, rgb(176 138 117) 0%, rgb(114 97 56) 50%, rgb(43 57 69) 100%)",
           }}
         >
           <h2 className="text-center my-3 logo">
-            <b className="section-title px-3">Menu</b>
+            <b className="section-title px-3">About Us</b>
           </h2>
-                <div
-                  className="section-col col-xl-3 card-item col-lg-4 col-md-6 col-sm-6 col-xs-6 col-12 mt-3"
-                >
-                   <div className="card">
-                   <div className="card-body p-2">
-                      <div className="d-flex text-black p-0">
-                         <img src="https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                           alt="Generic placeholder image" className="food-logo" />    
-                         <div className='row ps-3'> 
-                              <div className='col-12'>
-                                   <h6 className='text-start'>Pizza</h6>
-                              </div>
-                              <div className='col-12'>
-                                 <span className='price sale-price pe-2'>$100</span>
-                                 <span className='price mrp'>$125</span>
-                              </div>
-                         </div>
-                      </div>
-                   </div>
-               </div>
-                </div>
-           
+          <div className="col-lg-6 col-md-6 col-12">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHw%3D&w=1000&q=80"
+              className="w-100 p-1 mt-3"
+              style={{ borderRadius: "10px" }}
+              alt="about-img"
+            />
+          </div>
+          <div className="col-lg-6 col-md-6 col-12">
+            <p className="my-1 px-3 logo" style={{ fontSize: "18px" }}>
+              The About Us page of your website is an essential source of
+              information for all who want to know more about your business.
+              About Us pages are where you showcase your history, what is unique
+              about your work, your company’s values, and who you serve. The
+              design, written content, and visual or video elements together
+              tell an important story about who you are and why you do it.
+            </p>
+            <p className="my-1 px-3 logo" style={{ fontSize: "18px" }}>
+              <b style={{ fontSize: "24px" }}>About Us:-</b>You don’t need to
+              outright say, “our mission is ____,” but you should convey the
+              mission of your business in your About Us copy. This is key for
+              attracting talent, as well as leads that have Corporate Social
+              Responsibility (CSR) goals.
+            </p>
+            <p className="my-1 px-3 logo" style={{ fontSize: "18px" }}>
+              <b style={{ fontSize: "24px" }}>Our History :-</b>Every business
+              has an origin story worth telling, and usually, one that justifies
+              why you even do business and have clients. Some centennial
+              enterprises have pages of content that can fit in this section,
+              while startups can tell the story of how the company was born, its
+              challenges, and its vision for the future.
+            </p>
+          </div>
         </div>
+
         <div
           className="row pb-5 pt-2 mt-5 section"
           style={{
-            background:
-              "linear-gradient(to right top, #976456, #9e7358, #a2825d, #a49266, #a4a272, #a0a97a, #9db084, #99b78f, #94b795, #8fb79a, #8cb69f, #8ab5a4)",
+            backgroundColor: "#FBAB7E",
+            backgroundImage:
+              "linear-gradient(to right top, #d16ba5, #b96dab, #9f6ead, #866faa, #6f6ea3, #6d6ea5, #6b6fa7, #696fa9, #7e6fb6, #986dbe, #b569c1, #d362bf)",
           }}
         >
           <h2 className="text-center my-3 logo">
-            <b className="section-title px-3">Products</b>
+            <b className="section-title px-3">Contact Us</b>
           </h2>
-          {service.length > 0 &&
-            service
-              .sort((a, b) => b.id - a.id)
-              .map((el) => (
-                <div
-                  key={el.id}
-                  className="section-col col-lg-3 col-md-4 col-sm-6 col-12 p-1"
-                >
-                  <div
-                    className="card section-img"
-                    style={{ backgroundImage: `url(${el.img})` }}
-                  >
-                    <div className="section-des justify-contact-center">
-                      <h5 className="card-title text-center mt-4">
-                        {el.title}
-                      </h5>
-                      <p
-                        className="card-text px-2 text-center"
-                        style={{ color: "rgb(55 6 6)" }}
-                      >
-                        {el.des}
-                      </p>
-                      <a
-                        className="text-center m-auto"
-                        href="#"
-                        style={{ color: "#a30505" }}
-                      >
-                        More Info
-                      </a>
-                    </div>
-                    <h5 className="services-title">{el.title}</h5>
-                  </div>
-                </div>
-              ))}
+          <div className="col-lg-6 col-md-6 col-12">
+            <iframe
+              width="625"
+              height="475"
+              src="https://maps.google.com/maps?q=bareilly&t=k&z=12&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              style={{
+                borderRadius: "15px",
+              }}
+            ></iframe>
+          </div>
+          <div className="col-lg-6 col-md-6 col-12 text-light">
+            <form>
+              <div className="d-grid">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  className="form-control"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div className="d-grid my-3">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  className="form-control"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <div className="d-grid my-3">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  cols="100"
+                  className="form-control"
+                  placeholder="Enter message"
+                ></textarea>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <Footer />
