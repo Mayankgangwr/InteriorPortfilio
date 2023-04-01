@@ -6,6 +6,7 @@ import "./style.css";
 import Nav from "./nav";
 import Footer from "./footer";
 import { Outlet, Link } from "react-router-dom";
+import ServicePage from "./service";
 const settings = {
   infinite: true,
   draggAble: true,
@@ -292,11 +293,8 @@ const Home = () => {
               "linear-gradient(to right top, #d16ba5, #b96dab, #9f6ead, #866faa, #6f6ea3, #6d6ea5, #6b6fa7, #696fa9, #7e6fb6, #986dbe, #b569c1, #d362bf)",
           }}
         >
-          <h2 className="text-center my-3 logo">
-            <b className="section-title px-3">Services</b>
-          </h2>
-
-          {service.length > 0 &&
+          <ServicePage service={service} />
+          {/* {service.length > 0 &&
             service.slice(0, 4).map((el) => (
               <div
                 key={el.id}
@@ -325,7 +323,7 @@ const Home = () => {
                   <h5 className="services-title">{el.title}</h5>
                 </div>
               </div>
-            ))}
+            ))} */}
         </div>
         <div
           className="row pb-5 pt-2 mt-5 section"
@@ -386,16 +384,12 @@ const Home = () => {
           </h2>
           <div className="col-lg-6 col-md-6 col-12">
             <iframe
-              width="625"
-              height="475"
               src="https://maps.google.com/maps?q=bareilly&t=k&z=12&ie=UTF8&iwloc=&output=embed"
               frameborder="0"
               scrolling="no"
               marginheight="0"
               marginwidth="0"
-              style={{
-                borderRadius: "15px",
-              }}
+              className="location-map"
             ></iframe>
           </div>
           <div className="col-lg-6 col-md-6 col-12 text-light">
